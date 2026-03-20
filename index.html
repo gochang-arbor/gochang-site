@@ -50,7 +50,7 @@ h1{font-family:"Noto Serif KR",serif;font-size:clamp(2.2rem,6vw,3.8rem);font-wei
 .tgal{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 .card{background:var(--W);border-radius:9px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.07);cursor:pointer;border:1px solid #e4dac8;transition:transform .2s}
 .card:hover{transform:translateY(-3px)}
-.cimg{width:100%;height:160px;object-fit:cover;object-position:center 20%;display:block;background:#1a3d1a}
+.cimg{width:100%;height:160px;object-fit:contain;background-color:#1a3d1a;display:block;background:#1a3d1a}
 .cbody{padding:8px 10px 11px}
 .cno{font-size:.6rem;color:#aaa;margin-bottom:2px;font-weight:600;letter-spacing:.05em}
 .csh{font-size:.84rem;font-weight:700;color:var(--G2);margin-bottom:2px}
@@ -98,7 +98,7 @@ h1{font-family:"Noto Serif KR",serif;font-size:clamp(2.2rem,6vw,3.8rem);font-wei
 .mslider{position:relative;width:100%;height:280px;overflow:hidden;background:#1a3d1a;touch-action:pan-y}
 .mslides{display:flex;height:100%;transition:transform .3s ease}
 .mslide{flex-shrink:0;width:100%;height:100%}
-.mslide img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
+.mslide img{width:100%;height:100%;object-fit:contain;background-color:#1a3d1a;display:block}
 .marrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.45);color:#fff;border:none;width:38px;height:38px;border-radius:50%;font-size:1.2rem;cursor:pointer;z-index:5;display:flex;align-items:center;justify-content:center}
 .marrow-l{left:8px}.marrow-r{right:8px}
 .mdots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px}
@@ -316,7 +316,7 @@ function om(t){
   slides.innerHTML=''; dots.innerHTML='';
   t.imgs.forEach((src,i)=>{
     const s=document.createElement('div');s.className='mslide';
-    s.innerHTML=`<img src="${src}" alt="${t.s}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block">`;
+    s.innerHTML=`<img src="${src}" alt="${t.s}" loading="lazy" style="width:100%;height:100%;object-fit:contain;background-color:#1a3d1a;display:block">`;
     slides.appendChild(s);
     if(total>1){
       const d=document.createElement('div');
